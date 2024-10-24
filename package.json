@@ -1,10 +1,11 @@
 {
   "name": "midway-admin-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "使用midwayjs搭建的node后台服务",
   "private": true,
   "dependencies": {
     "@midwayjs/bootstrap": "^3.12.0",
+    "@midwayjs/captcha": "^3.18.2",
     "@midwayjs/core": "^3.12.0",
     "@midwayjs/decorator": "^3.18.0",
     "@midwayjs/info": "^3.12.0",
@@ -13,11 +14,13 @@
     "@midwayjs/logger": "^3.1.0",
     "@midwayjs/orm": "^3.4.3",
     "@midwayjs/redis": "^3.18.2",
+    "@midwayjs/swagger": "^3.18.2",
     "@midwayjs/typeorm": "^3.18.2",
     "@midwayjs/validate": "^3.12.0",
     "@midwayjs/view-ejs": "^3.18.2",
     "bcryptjs": "^2.4.3",
     "mysql2": "^3.11.3",
+    "swagger-ui-dist": "^5.17.14",
     "typeorm": "^0.3.20"
   },
   "devDependencies": {

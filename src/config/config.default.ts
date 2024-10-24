@@ -1,10 +1,13 @@
 import { MidwayConfig } from '@midwayjs/core';
+// @ts-ignore
+import * as packageJson from '../../package.json';
 
 export default {
   // use for cookie sign key, should change to your own and keep security
   keys: '1729500811152_6775',
   koa: {
     port: 7001,
+    globalPrefix: '/api',
   },
   // 添加orm配置
   orm: {
@@ -37,7 +40,25 @@ export default {
   app: {
     security: {
       prefix: '/api',     // 指定已/api开头的接口地址需要拦截
-      ignore: ['/api/login'],   // 指定该接口地址，不需要拦截
+      ignore: ['/api/login','/api/captcha/getCaptcha'],   // 指定该接口地址，不需要拦截
     },
-  }
+  },
+  swagger: {
+    title: packageJson.name,
+    description: packageJson.description,
+    version: packageJson.version,
+    tags: [
+      {
+        name: '/',
+        description: '默认'
+      },
+      {
+        name: 'captcha',
+        description: '验证码'
+      },
+    ],
+    auth: {
+      authType: 'bearer',
+    },
+  },
 } as MidwayConfig;
