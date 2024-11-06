@@ -1,4 +1,4 @@
-import { CommonException } from './CommonException';
+import {CommonException} from './CommonException';
 
 export class Assert {
   /**

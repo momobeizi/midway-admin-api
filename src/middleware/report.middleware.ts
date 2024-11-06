@@ -1,5 +1,5 @@
-import { Middleware, IMiddleware } from '@midwayjs/core';
-import { NextFunction, Context } from '@midwayjs/koa';
+import {IMiddleware, Middleware} from '@midwayjs/core';
+import {Context, NextFunction} from '@midwayjs/koa';
 
 @Middleware()
 export class ReportMiddleware implements IMiddleware<Context, NextFunction> {

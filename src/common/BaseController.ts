@@ -1,7 +1,7 @@
 // src/common/BaseController.ts
-import { BaseService } from './BaseService';
-import { BaseEntity } from './BaseEntity';
-import { Body, Post, Query } from '@midwayjs/decorator';
+import {BaseService} from './BaseService';
+import {BaseEntity} from '../entity/BaseEntity';
+import {Body, Post, Query} from '@midwayjs/decorator';
 
 /**
  * Controller基础类，由于类继承不支持装饰类@Post、@Query、@Body等，

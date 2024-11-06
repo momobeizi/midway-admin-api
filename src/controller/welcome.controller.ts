@@ -1,5 +1,5 @@
 import {Controller, Get, Inject} from '@midwayjs/core';
-import { Context } from '@midwayjs/koa';
+import {Context} from '@midwayjs/koa';
 // @ts-ignore
 import * as packageJson from '../../package.json';
 import {ApiTags} from "@midwayjs/swagger";

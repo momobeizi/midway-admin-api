@@ -8,7 +8,7 @@ export class BaseEntity {
   updaterId: number;
 
   @Column({ type: 'bigint' })
-  createrId: number;
+  creatorId: number;
 
   @CreateDateColumn()
   createTime: Date;

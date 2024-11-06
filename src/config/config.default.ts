@@ -1,4 +1,4 @@
-import { MidwayConfig } from '@midwayjs/core';
+import {MidwayConfig} from '@midwayjs/core';
 // @ts-ignore
 import * as packageJson from '../../package.json';
 
@@ -16,9 +16,11 @@ export default {
     port: 3306,             // 改成你的mysql数据库端口
     username: 'root',       // 改成你的mysql数据库用户名（需要有创建表结构权限）
     password: 'root',     // 改成你的mysql数据库密码
-    database: 'midway_admin',// 改成你的mysql数据库IP
+    database: 'midway_db',// 改成你的mysql数据库
     synchronize: true,      // 如果第一次使用，不存在表，有同步的需求可以写 true
     logging: true,
+    entities: ['entity'],
+    dateStrings: true,
   },
   redis: {
     client: {
@@ -40,7 +42,7 @@ export default {
   app: {
     security: {
       prefix: '/api',     // 指定已/api开头的接口地址需要拦截
-      ignore: ['/api/login','/api/captcha/getCaptcha'],   // 指定该接口地址，不需要拦截
+      ignore: ['/api/login', '/api/captcha/getCaptcha'],   // 指定该接口地址，不需要拦截
     },
   },
   swagger: {

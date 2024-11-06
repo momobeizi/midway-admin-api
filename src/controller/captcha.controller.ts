@@ -5,13 +5,13 @@ import {CaptchasService} from "../service/captchas.service";
 
 @ApiTags(['captcha'])
 @Controller('/captcha')
-export class CaptchaController{
+export class CaptchaController {
   @Inject()
-  captchasService:CaptchasService
+  captchasService: CaptchasService
 
-  @ApiResponse({ type: captchaVO })
+  @ApiResponse({type: captchaVO})
   @Get('/getCaptcha')
-  public async getCaptcha(){
+  public async getCaptcha() {
     return await this.captchasService.getCaptcha()
   }
 }

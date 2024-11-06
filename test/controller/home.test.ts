@@ -1,5 +1,5 @@
-import { createApp, close, createHttpRequest } from '@midwayjs/mock';
-import { Framework } from '@midwayjs/koa';
+import {close, createApp, createHttpRequest} from '@midwayjs/mock';
+import {Framework} from '@midwayjs/koa';
 
 describe('test/controller/home.test.ts', () => {
 

@@ -1,13 +1,13 @@
-import { Configuration, App } from '@midwayjs/core';
+import {App, Configuration} from '@midwayjs/core';
 import * as koa from '@midwayjs/koa';
 import * as validate from '@midwayjs/validate';
 import * as info from '@midwayjs/info';
-import { join } from 'path';
-import { DefaultErrorFilter } from './filter/default.filter';
-import { NotFoundFilter } from './filter/notfound.filter';
-import { ReportMiddleware } from './middleware/report.middleware';
-import { FormatMiddleware } from './middleware/format.middleware';
-import { SecurityMiddleware } from './middleware/security.middleware'
+import {join} from 'path';
+import {DefaultErrorFilter} from './filter/default.filter';
+import {NotFoundFilter} from './filter/notfound.filter';
+import {ReportMiddleware} from './middleware/report.middleware';
+import {FormatMiddleware} from './middleware/format.middleware';
+import {SecurityMiddleware} from './middleware/security.middleware'
 import * as view from '@midwayjs/view-ejs';
 import * as orm from '@midwayjs/orm';
 import * as jwt from '@midwayjs/jwt';

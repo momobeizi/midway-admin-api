@@ -1,4 +1,4 @@
-import { MidwayConfig } from '@midwayjs/core';
+import {MidwayConfig} from '@midwayjs/core';
 
 export default {
   koa: {

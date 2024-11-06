@@ -1,11 +1,11 @@
 // src/middleware/security.middleware.ts
-import { Config, Inject, Middleware } from '@midwayjs/decorator';
-import { Context, NextFunction } from '@midwayjs/koa';
-import { httpError } from '@midwayjs/core';
-import { JwtService } from '@midwayjs/jwt';
-import { UserContext } from '../common/Context';
-import { RedisService } from '@midwayjs/redis';
-import { Constant } from '../common/Constant';
+import {Config, Inject, Middleware} from '@midwayjs/decorator';
+import {Context, NextFunction} from '@midwayjs/koa';
+import {httpError} from '@midwayjs/core';
+import {JwtService} from '@midwayjs/jwt';
+import {UserContext} from '../common/Context';
+import {RedisService} from '@midwayjs/redis';
+import {Constant} from '../common/Constant';
 
 /**
  * 安全验证
@@ -36,7 +36,7 @@ export class SecurityMiddleware {
         throw new httpError.UnauthorizedError('缺少Bearer');
       }
       // 验证token，过期会抛出异常
-      const jwt = await this.jwtUtil.verify(token, { complete: true });
+      const jwt = await this.jwtUtil.verify(token, {complete: true});
       // jwt中存储的user信息
       const payload = jwt['payload'];
       const key = Constant.TOKEN + ':' + payload.userId + ':' + token;
@@ -53,8 +53,8 @@ export class SecurityMiddleware {
   }
 
   public match(ctx: Context): boolean {
-    const { path } = ctx;
-    const { prefix, ignore } = this.securityConfig;
+    const {path} = ctx;
+    const {prefix, ignore} = this.securityConfig;
     const exist = ignore.find((item) => {
       return item.match(path);
     });
