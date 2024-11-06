@@ -9,7 +9,7 @@ import {ReportMiddleware} from './middleware/report.middleware';
 import {FormatMiddleware} from './middleware/format.middleware';
 import {SecurityMiddleware} from './middleware/security.middleware'
 import * as view from '@midwayjs/view-ejs';
-import * as orm from '@midwayjs/orm';
+import * as orm from '@midwayjs/typeorm';
 import * as jwt from '@midwayjs/jwt';
 import * as redis from '@midwayjs/redis';
 import * as swagger from '@midwayjs/swagger';
