@@ -1,6 +1,7 @@
 import {Inject, Provide} from "@midwayjs/core";
 import {CaptchaService} from "@midwayjs/captcha"
 import {captchaVO} from "../api/vo/CommonVO";
+import {captcha} from "../types/captcha";
 
 @Provide()
 export class CaptchasService {
@@ -14,5 +15,9 @@ export class CaptchasService {
     vo.captchaId = id
     vo.captchaBase64 = imageBase64
     return vo
+  }
+
+  public async checkCaptcha(params: captcha) {
+    return await this.captchaService.check(params.captchaId, params.captcha)
   }
 }

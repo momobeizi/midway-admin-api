@@ -1,8 +1,8 @@
 export class ErrorCode {
   /**
-   * 100000 正常
+   * 200 正常
    */
-  static OK = 100000;
+  static OK = 200;
   /**
    * 400000-500000 平台异常
    */

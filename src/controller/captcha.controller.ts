@@ -10,7 +10,10 @@ export class CaptchaController {
   captchasService: CaptchasService
 
   @ApiResponse({type: captchaVO})
-  @Get('/getCaptcha')
+  @Get('/getCaptcha', {
+    summary: '验证码',
+    description: '获取登录验证码',
+  })
   public async getCaptcha() {
     return await this.captchasService.getCaptcha()
   }

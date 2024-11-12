@@ -1,18 +1,18 @@
-import { Column, CreateDateColumn, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import {Column, CreateDateColumn, PrimaryColumn, UpdateDateColumn} from 'typeorm';
 
 export class BaseEntity {
-  @PrimaryColumn({ type: 'bigint' })
-  id: number;
+  @PrimaryColumn({type: 'bigint', comment: 'id主键'})
+  id: string;
 
-  @Column({ type: 'bigint' })
-  updaterId: number;
+  @Column({nullable: true, comment: '更新人id'})
+  updaterId: string | null;
 
-  @Column({ type: 'bigint' })
-  creatorId: number;
+  @Column({nullable: true, comment: '创建人id'})
+  creatorId: string | null;
 
-  @CreateDateColumn()
+  @CreateDateColumn({comment: '创建时间'})
   createTime: Date;
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({comment: '更新时间'})
   updateTime: Date;
 }

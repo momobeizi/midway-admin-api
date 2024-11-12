@@ -1,13 +1,13 @@
 // src/filter/default.filter.ts
-import {Catch} from '@midwayjs/decorator';
+import { Catch, MidwayHttpError } from '@midwayjs/core';
+
 import {Context} from '@midwayjs/koa';
-import {ErrorCode} from '../common/ErrorCode';
+// import {ErrorCode} from '../common/ErrorCode';
 
 @Catch()
 export class DefaultErrorFilter {
 
-  async catch(err: Error, ctx: Context) {
-    return {code: ErrorCode.UN_ERROR, msg: err.message};
+  async catch(err: MidwayHttpError, ctx: Context) {
+    return {code: err.code, msg: err.message};
   }
-
 }

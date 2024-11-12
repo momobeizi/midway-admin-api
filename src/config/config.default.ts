@@ -22,7 +22,7 @@ export default {
         database: 'midway_db',// 改成你的mysql数据库
         synchronize: true,      // 如果第一次使用，不存在表，有同步的需求可以写 true
         logging: true,
-        entities: ['entity','**/*.entity.{j,t}s',],
+        entities: ['entity', '**/*.entity.{j,t}s',],
         dateStrings: true,
       }
     }
@@ -47,7 +47,7 @@ export default {
   app: {
     security: {
       prefix: '/api',     // 指定已/api开头的接口地址需要拦截
-      ignore: ['/api/login', '/api/captcha/getCaptcha'],   // 指定该接口地址，不需要拦截
+      ignore: ['/api/user/login', '/api/captcha/getCaptcha', '/api/user/add'],   // 指定该接口地址，不需要拦截
     },
   },
   swagger: {
